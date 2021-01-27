@@ -51,13 +51,13 @@ class TrailerMovie : YouTubeBaseActivity() {
         youtube_player = findViewById(R.id.youtube_player)
         tv_rating = findViewById(R.id.tv_rating)
 
-        tv_title!!.text = movie!!.title
-        rating_bar!!.rating = movie!!.voteAverage.toFloat()
-        rating_bar!!.setIsIndicator(true)
-        tv_trailer_release_date!!.text = movie!!.releaseDate
-        tv_overview_trailer!!.text = movie!!.overview
-        tv_rating!!.text = movie!!.voteAverage.toString()
-        Glide.with(this).load(movie!!.posterURL()).apply(RequestOptions()
+        tv_title?.text = movie?.title
+        rating_bar?.rating = movie!!.voteAverage.toFloat()
+        rating_bar?.setIsIndicator(true)
+        tv_trailer_release_date?.text = movie?.releaseDate
+        tv_overview_trailer?.text = movie?.overview
+        tv_rating?.text = movie?.voteAverage.toString()
+        Glide.with(this).load(movie?.posterURL()).apply(RequestOptions()
             .fitCenter())
             .into(img_poster_trailer!!)
 
@@ -74,19 +74,20 @@ class TrailerMovie : YouTubeBaseActivity() {
 
         })
 
+
     }
     private fun youtubePlayer(id: String?) {
         // todo BASE_YOUTUBE_URL xem thử cách dùng link này của github leouong đi e
-        youtube_player!!.initialize(API_KEY_YOUTUBE, object : YouTubePlayer.OnInitializedListener{
+        youtube_player?.initialize(API_KEY_YOUTUBE, object : YouTubePlayer.OnInitializedListener{
             override fun onInitializationSuccess(
                 p0: YouTubePlayer.Provider?,
                 p1: YouTubePlayer?,
                 p2: Boolean
             ) {
                 if (movie!!.voteAverage >= AVER_RATING){
-                    p1!!.loadVideo(id)
-                    p1!!.setShowFullscreenButton(false)
-                }else p1!!.cueVideo(id)
+                    p1?.loadVideo(id)
+                    p1?.setShowFullscreenButton(false)
+                }else p1?.cueVideo(id)
 
             }
 

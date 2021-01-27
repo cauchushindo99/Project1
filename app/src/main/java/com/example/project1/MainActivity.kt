@@ -39,8 +39,8 @@ class MainActivity : AppCompatActivity() {
                 var a = 0
             }
             override fun onResponse(call: Call<NowPlaying?>?, response: Response<NowPlaying?>) {
-                adapter!!.setList(response.body()?.results as ArrayList<Movie>)
-                adapterImg!!.setList1(response.body()?.results as ArrayList<Movie>)
+                adapter?.setList(response.body()?.results as ArrayList<Movie>)
+                adapterImg?.setList1(response.body()?.results as ArrayList<Movie>)
 
             }
         })
@@ -55,7 +55,7 @@ class MainActivity : AppCompatActivity() {
     }
     private fun setupList(){
         val mLayoutManager: RecyclerView.LayoutManager = LinearLayoutManager(this)
-        recyclerView!!.layoutManager = mLayoutManager
+        recyclerView?.layoutManager = mLayoutManager
         adapter = MovieAdapter(this, movieList?: ArrayList()){ movie ->
             val bundle = Bundle()
             bundle.putParcelable("movie", movie)
@@ -63,11 +63,11 @@ class MainActivity : AppCompatActivity() {
             trailer.putExtras(bundle)
             startActivity(trailer)
         }
-        recyclerView!!.adapter = adapter
+        recyclerView?.adapter = adapter
     }
     private fun setupImg(){
         val mLayoutManager1: RecyclerView.LayoutManager = LinearLayoutManager(this)
-        recyclerViewImg!!.layoutManager = mLayoutManager1
+        recyclerViewImg?.layoutManager = mLayoutManager1
         adapterImg = ImgAdapter(this, movieList?: ArrayList())
     }
 
