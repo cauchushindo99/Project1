@@ -4,13 +4,14 @@ package com.example.project1
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.Html
+import android.widget.Toast
 
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import androidx.recyclerview.widget.RecyclerView
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.project1.adapter.ImgAdapter
 
 import com.example.project1.adapter.MovieAdapter
@@ -28,7 +29,8 @@ class MainActivity : AppCompatActivity() {
     var movieList: ArrayList<Movie>? = null
     var adapter: MovieAdapter? = null
     var adapterImg: ImgAdapter? = null
-    private var recyclerView: RecyclerView? = null
+    var recyclerView: RecyclerView? = null
+    var swipeRefreshLayout: SwipeRefreshLayout? = null
     var recyclerViewImg: RecyclerView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,11 +46,18 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
-        recyclerViewImg = findViewById(R.id.rc_view)
-        recyclerView = findViewById(R.id.rc_view2)
+        recyclerViewImg = findViewById(R.id.rcView)
+        recyclerView = findViewById(R.id.rcView2)
         movieList = ArrayList()
         setupList()
         setupImg()
+        swipeRefreshLayout = findViewById(R.id.swipeRefreshLayout)
+        swipeRefreshLayout?.setOnRefreshListener{
+            Toast.makeText(this, "Refreshed", Toast.LENGTH_SHORT).show()
+            swipeRefreshLayout?.isRefreshing = false
+
+        }
+
 
 
 

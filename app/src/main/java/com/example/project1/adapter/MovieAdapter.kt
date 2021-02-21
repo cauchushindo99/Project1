@@ -34,10 +34,7 @@ class MovieAdapter(private val mContext: Context, private var mList: List<Movie>
               itemView.setOnClickListener(this)
 
           }
-
-
     }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MovieViewHolder {
        return MovieViewHolder(
             LayoutInflater.from(mContext).inflate(R.layout.activity_item, parent,false)
@@ -47,7 +44,6 @@ class MovieAdapter(private val mContext: Context, private var mList: List<Movie>
     override fun getItemCount(): Int {
        return mList?.size?:0
     }
-
 
     override fun onBindViewHolder(holder: MovieViewHolder, position: Int) {
         holder.tvName.text = mList?.get(position)?.title

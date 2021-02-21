@@ -10,10 +10,9 @@ const val API_KEY = "158823ee8cf8627ff81d262a409a53a0"
 const val API_KEY_IMG = "158823ee8cf8627ff81d262a409a53a0"
 const val BASE_IMAGES_URL = "http://image.tmdb.org/t/p/"
 const val POSTER_SIZE = "w200"
-const val BACKDROP_SIZE = "w400"
 const val BASE_YOUTUBE_URL = "https://www.youtube.com/watch?v="
-const val API_KEY_YOUTUBE = "AIzaSyC02zjRvLlIC7-ii0rMdWBEsZ1QyNLpuL8"
-const val AVER_RATING = 7.5
+const val API_KEY_YOUTUBE = "AIzaSyA1vrnvlc9Q9D9DkSVwJHt7yZOyA1RcOws"
+const val AVER_RATING = 4.5
 
 class RetrofitClient {
     companion object {

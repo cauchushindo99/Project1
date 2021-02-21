@@ -13,7 +13,7 @@ The following **required** functionality is completed:
 * [x] List item with the [RecyclerView](https://guides.codepath.com/android/Using-the-RecyclerView).
 * [x] Remove "!!" for optional params.
 * [] Change Linear and Relative layout to Constraint layout.
-* [] Improve readable with prettier name that follow Camels pattern.
+* [x] Improve readable with prettier name that follow Camels pattern.
 * [] Extract string, dimens, resource.
 * [x] Commit source. Remember the rule (+, *, -).
 * [x] For each movie displayed, user can see the following details:

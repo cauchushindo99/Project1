@@ -1,7 +1,6 @@
 package com.example.project1.api
 
-import com.example.project1.entity.Videos
-import com.example.project1.model.Movie
+import com.example.project1.model.Videos
 import com.example.project1.model.NowPlaying
 import retrofit2.Call
 import retrofit2.http.GET

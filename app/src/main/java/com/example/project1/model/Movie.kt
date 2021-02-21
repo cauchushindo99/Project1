@@ -3,7 +3,6 @@ package com.example.project1.model
 import android.os.Parcelable
 
 import com.example.project1.api.BASE_IMAGES_URL
-
 import com.example.project1.api.POSTER_SIZE
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
