@@ -22,9 +22,27 @@ class ImgAdapter(private val mContext: Context, private var mList: MutableList<M
    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {
-        return ImageViewHolder(
-            LayoutInflater.from(mContext).inflate(R.layout.item, parent, false)
-        )
+        return when(viewType) {
+            R.layout.item2 -> ImageViewHolder(
+                LayoutInflater.from(mContext).inflate(R.layout.item2, parent, false)
+            )
+            R.layout.item3 -> ImageViewHolder(
+                LayoutInflater.from(mContext).inflate(R.layout.item3, parent, false)
+            )
+            else -> ImageViewHolder(
+                LayoutInflater.from(mContext).inflate(R.layout.item, parent, false)
+            )
+
+        }
+
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return when {
+            position % 2 != 0 && position != 0 -> R.layout.item3
+            position % 2 == 0 && position != 0 -> R.layout.item2
+            else -> R.layout.item
+        }
     }
 
     override fun getItemCount(): Int {

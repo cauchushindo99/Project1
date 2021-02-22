@@ -84,7 +84,6 @@ class TrailerMovie : YouTubeBaseActivity() {
                     p1?.loadVideo(key)
                     p1?.setShowFullscreenButton(true)
                 }else p1?.cueVideo(key)
-
             }
 
             override fun onInitializationFailure(
