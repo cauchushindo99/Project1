@@ -1,54 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black">
+    android:background="#BFBEBE">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rcView"
-        android:layout_width="match_parent"
-        android:layout_height="150dp">
 
-    </androidx.recyclerview.widget.RecyclerView>
 
-    <LinearLayout
-        android:id="@+id/linear"
-        android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_marginTop="151dp">
-
-        <Button
-            android:id="@+id/btnMovie"
-            android:layout_width="205dp"
-            android:layout_height="wrap_content"
-            android:background="@color/black"
-            android:gravity="center"
-            android:text="MOVIE"
-            android:textColor="#ffd700"
-            android:textStyle="bold"></Button>
-
-        <Button
-            android:id="@+id/btnOther"
-            android:layout_width="205dp"
-            android:layout_height="wrap_content"
-            android:background="@color/black"
-            android:text="OTHER"
-            android:textColor="#ffd700"
-            android:textStyle="bold" />
-
-    </LinearLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:id="@+id/swipeRefreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="187dp">
+        android:layout_height="match_parent">
 
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rcView2"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:background="#171717">
 
         </androidx.recyclerview.widget.RecyclerView>
 

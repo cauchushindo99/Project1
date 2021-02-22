@@ -3,6 +3,7 @@ package com.example.project1
 
 
 import android.content.Intent
+import android.net.ConnectivityManager
 import android.os.Bundle
 import android.widget.Toast
 
@@ -36,6 +37,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
         getService()?.getNowPlaying(API_KEY)?.enqueue(object :Callback<NowPlaying?>{
             override fun onFailure(call: Call<NowPlaying?>?, t: Throwable?) {
                 var a = 0
@@ -46,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
-        recyclerViewImg = findViewById(R.id.rcView)
+//        recyclerViewImg = findViewById(R.id.rcView)
         recyclerView = findViewById(R.id.rcView2)
         movieList = ArrayList()
         setupList()
@@ -79,9 +81,6 @@ class MainActivity : AppCompatActivity() {
         recyclerViewImg?.layoutManager = mLayoutManager1
         adapterImg = ImgAdapter(this, movieList?: ArrayList())
     }
-
-
-
 
 
 }

@@ -82,7 +82,7 @@ class TrailerMovie : YouTubeBaseActivity() {
             ) {
                 if (movie!!.voteAverage >= AVER_RATING){
                     p1?.loadVideo(key)
-                    p1?.setShowFullscreenButton(false)
+                    p1?.setShowFullscreenButton(true)
                 }else p1?.cueVideo(key)
 
             }

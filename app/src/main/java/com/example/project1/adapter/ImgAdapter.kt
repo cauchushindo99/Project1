@@ -18,10 +18,7 @@ class ImgAdapter(private val mContext: Context, private var mList: MutableList<M
         notifyDataSetChanged()
     }
    class ImageViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        var itemImg: ImageView
-       init {
-           itemImg= itemView.findViewById(R.id.img_movie)
-       }
+        var itemImg: ImageView = itemView.findViewById(R.id.img_movie)
    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ImageViewHolder {

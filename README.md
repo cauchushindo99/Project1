@@ -18,11 +18,11 @@ The following **required** functionality is completed:
 * [x] Commit source. Remember the rule (+, *, -).
 * [x] For each movie displayed, user can see the following details:
   * [x] Title, Poster Image, Overview (Portrait mode)
-  * [] Title, Backdrop Image, Overview (Landscape mode)
+  * [x] Title, Backdrop Image, Overview (Landscape mode)
 
 The following **optional** features are implemented:
 
-* [] Display a nice default [placeholder graphic](https://guides.codepath.com/android/Displaying-Images-with-the-Glide-Library) for each image during loading.
+* [x] Display a nice default [placeholder graphic](https://guides.codepath.com/android/Displaying-Images-with-the-Glide-Library) for each image during loading.
 
 The following **bonus** features are implemented:
 

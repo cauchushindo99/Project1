@@ -12,7 +12,7 @@ const val BASE_IMAGES_URL = "http://image.tmdb.org/t/p/"
 const val POSTER_SIZE = "w200"
 const val BASE_YOUTUBE_URL = "https://www.youtube.com/watch?v="
 const val API_KEY_YOUTUBE = "AIzaSyA1vrnvlc9Q9D9DkSVwJHt7yZOyA1RcOws"
-const val AVER_RATING = 4.5
+const val AVER_RATING = 5.0
 
 class RetrofitClient {
     companion object {
