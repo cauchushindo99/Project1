@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 data class VideoListDTO (
     @Expose
     @SerializedName("id")
-    var id: Int = 0,
+    var id: String = "",
     @Expose
     @SerializedName("iso_639_1")
     var iso6391: String="",

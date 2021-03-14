@@ -14,6 +14,7 @@ import com.example.project1.api.RetrofitClient.Companion.getService
 import com.example.project1.model.Videos
 import com.example.project1.model.Movie
 import com.example.project1.model.Trailer
+import com.example.project1.model.VideoListDTO
 import com.google.android.youtube.player.YouTubeBaseActivity
 import com.google.android.youtube.player.YouTubeInitializationResult
 import com.google.android.youtube.player.YouTubePlayer
@@ -40,7 +41,6 @@ class TrailerMovie : YouTubeBaseActivity() {
         setContentView(R.layout.activity_trailer)
         val bundle = intent.extras
         movie = bundle?.getParcelable<Parcelable>("movie") as Movie?
-
         imgPosterTrailer = findViewById(R.id.imgPosterDetail)
         tvTitle = findViewById(R.id.tvTitle)
         tvReleaseDate = findViewById(R.id.tvReleaseDate)
@@ -49,7 +49,6 @@ class TrailerMovie : YouTubeBaseActivity() {
         tvOverviewTrailer = findViewById(R.id.tvOverviewDetail)
         youtubePlayer = findViewById(R.id.youtubePlayer)
         tvRating = findViewById(R.id.tvRating)
-
         tvTitle?.text = movie?.title
         ratingBar?.rating = movie!!.voteAverage.toFloat()
         ratingBar?.setIsIndicator(true)
@@ -58,19 +57,14 @@ class TrailerMovie : YouTubeBaseActivity() {
         tvRating?.text = movie?.voteAverage.toString()
         Glide.with(this).load(movie?.posterURL()).apply(RequestOptions()
             .fitCenter())
-            .into(imgPosterTrailer!!)
-
-
-
-        getService()?.getVideo(movie!!.id,API_KEY)?.enqueue(object : Callback<Videos?>{
+            .into(imgPosterTrailer?: return)
+        getService()?.getVideo(movie?.id?: 0,API_KEY)?.enqueue(object : Callback<Videos?>{
             override fun onFailure(call: Call<Videos?>?, t: Throwable?) {
-
+                var a = 0
             }
-
             override fun onResponse(call: Call<Videos?>?, response: Response<Videos?>?) {
                 youtubePlayer(response?.body()?.results?.get(0)?.key)
             }
-
         })
     }
     private fun youtubePlayer(key: String?) {
@@ -85,12 +79,11 @@ class TrailerMovie : YouTubeBaseActivity() {
                     p1?.setShowFullscreenButton(true)
                 }else p1?.cueVideo(key)
             }
-
             override fun onInitializationFailure(
                 p0: YouTubePlayer.Provider?,
                 p1: YouTubeInitializationResult?
             ) {
-
+                var a = 0
             }
         })
     }

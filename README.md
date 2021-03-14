@@ -3,7 +3,7 @@
 
 WhatMovies shows the latest movies currently playing in theaters. The app utilizes the Movie Database API to display images and basic information about these movies to the user.
 
-Time spent: spent in total
+Time spent: day spent in total
 
 ## User Stories
 
@@ -12,9 +12,9 @@ The following **required** functionality is completed:
 * [x] User can view a list of movies (title, poster image, and overview) currently playing in theaters from the Movie Database API.
 * [x] List item with the [RecyclerView](https://guides.codepath.com/android/Using-the-RecyclerView).
 * [x] Remove "!!" for optional params.
-* [] Change Linear and Relative layout to Constraint layout.
+* [x] Change Linear and Relative layout to Constraint layout.
 * [x] Improve readable with prettier name that follow Camels pattern.
-* [] Extract string, dimens, resource.
+* [x] Extract string, dimens, resource.
 * [x] Commit source. Remember the rule (+, *, -).
 * [x] For each movie displayed, user can see the following details:
   * [x] Title, Poster Image, Overview (Portrait mode)

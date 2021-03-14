@@ -2,6 +2,7 @@ package com.example.project1.api
 
 import com.example.project1.model.Videos
 import com.example.project1.model.NowPlaying
+import com.example.project1.model.VideoListDTO
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
